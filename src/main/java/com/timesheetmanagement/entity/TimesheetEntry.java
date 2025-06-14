@@ -5,9 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 @Entity
 @Table(name = "timesheet_entry")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class TimesheetEntry {
 
     @Id

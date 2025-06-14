@@ -1,6 +1,7 @@
 package com.timesheetmanagement.entity;
 
-import com.example.timesheetmanagement.enums.ProjectStatus;
+import com.timesheetmanagement.entity.Project;
+import com.timesheetmanagement.util.ProjectStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -8,9 +9,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "projects")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class Project {
 
     @Id
@@ -29,4 +28,36 @@ public class Project {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false, length = 10)
     private ProjectStatus status;
+
+    public String getProjectCode() {
+        return projectCode;
+    }
+
+    public void setProjectCode(String projectCode) {
+        this.projectCode = projectCode;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getClient() {
+        return client;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
+    }
+
+    public ProjectStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProjectStatus status) {
+        this.status = status;
+    }
 }

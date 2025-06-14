@@ -5,10 +5,47 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 @Entity
 @Table(name = "project_assignment")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class ProjectAssignment {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Contractor getContractor() {
+        return contractor;
+    }
+
+    public void setContractor(Contractor contractor) {
+        this.contractor = contractor;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    public Contractor getManager() {
+        return manager;
+    }
+
+    public void setManager(Contractor manager) {
+        this.manager = manager;
+    }
+
+    public LocalDate getAssignedDate() {
+        return assignedDate;
+    }
+
+    public void setAssignedDate(LocalDate assignedDate) {
+        this.assignedDate = assignedDate;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

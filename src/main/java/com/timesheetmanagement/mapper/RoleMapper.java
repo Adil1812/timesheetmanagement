@@ -1,6 +1,6 @@
 package com.timesheetmanagement.mapper;
 
-i
+
 import com.timesheetmanagement.entity.Role;
 import com.timesheetmanagement.payload.RoleDTO;
 import org.mapstruct.Mapper;

@@ -9,9 +9,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "activities")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class Activity {
         @Id
         @Column(name = "activity_code", length = 30)
@@ -27,5 +25,29 @@ public class Activity {
         @Column(name = "description", length = 255)
         @Size(max = 255, message = "Description must be at most 255 characters")
         private String description;
-    }
+
+        public String getActivityCode() {
+                return activityCode;
+        }
+
+        public void setActivityCode(String activityCode) {
+                this.activityCode = activityCode;
+        }
+
+        public String getActivityName() {
+                return activityName;
+        }
+
+        public void setActivityName(String activityName) {
+                this.activityName = activityName;
+        }
+
+        public String getDescription() {
+                return description;
+        }
+
+        public void setDescription(String description) {
+                this.description = description;
+        }
 }
+

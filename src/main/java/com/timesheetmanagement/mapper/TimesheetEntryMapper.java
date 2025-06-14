@@ -2,7 +2,8 @@ package com.timesheetmanagement.mapper;
 
 import com.timesheetmanagement.entity.TimesheetEntry;
 import com.timesheetmanagement.payload.TimesheetEntryDTO;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface TimesheetEntryMapper {
 

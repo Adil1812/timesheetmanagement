@@ -2,8 +2,11 @@ package com.timesheetmanagement.mapper;
 
 import com.timesheetmanagement.entity.ProjectAssignment;
 import com.timesheetmanagement.payload.ProjectAssignmentDTO;
-import org.springframework.web.bind.annotation.Mapping;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
+
+@Mapper(componentModel = "spring")
 public interface ProjectAssignmentMapper {
     @Mapping(source = "contractor.id", target = "contractorId")
     @Mapping(source = "project.projectCode", target = "projectCode")

@@ -5,9 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "contractors")
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+
 
 public class Contractor {
 
@@ -23,4 +21,29 @@ public class Contractor {
 
     @Column(nullable = false, length = 250)
     private String password;
+    public Long getContractorId() {
+        return contractorId;
+    }
+
+    public void setContractorId(Long contractorId) {
+        this.contractorId = contractorId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
 }
