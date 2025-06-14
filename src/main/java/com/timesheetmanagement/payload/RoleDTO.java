@@ -4,9 +4,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class RoleDTO {
 
     private Long id;

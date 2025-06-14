@@ -2,10 +2,13 @@ package com.timesheetmanagement.payload;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class ActivityDTO {
 
 
@@ -21,4 +24,4 @@ public class ActivityDTO {
         @Size(max = 255, message = "Description must be at most 255 characters")
         private String description;
     }
-}
+

@@ -3,10 +3,15 @@ package com.timesheetmanagement.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "roles")
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Role {
 
     @Id
@@ -18,19 +23,5 @@ public class Role {
     @Column(name = "actor", nullable = false, unique = true, length = 30)
     private String actor; // Example: ADMIN, PROJECT_MANAGER, CONTRACTOR
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getActor() {
-        return actor;
-    }
-
-    public void setActor(String actor) {
-        this.actor = actor;
-    }
 }

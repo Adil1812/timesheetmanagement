@@ -6,10 +6,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "activities")
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Activity {
         @Id
         @Column(name = "activity_code", length = 30)
@@ -26,28 +31,6 @@ public class Activity {
         @Size(max = 255, message = "Description must be at most 255 characters")
         private String description;
 
-        public String getActivityCode() {
-                return activityCode;
-        }
 
-        public void setActivityCode(String activityCode) {
-                this.activityCode = activityCode;
-        }
-
-        public String getActivityName() {
-                return activityName;
-        }
-
-        public void setActivityName(String activityName) {
-                this.activityName = activityName;
-        }
-
-        public String getDescription() {
-                return description;
-        }
-
-        public void setDescription(String description) {
-                this.description = description;
-        }
 }
 

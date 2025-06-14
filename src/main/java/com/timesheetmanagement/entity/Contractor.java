@@ -1,11 +1,16 @@
 package com.timesheetmanagement.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Entity
 @Table(name = "contractors")
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 
 public class Contractor {
 
@@ -21,29 +26,7 @@ public class Contractor {
 
     @Column(nullable = false, length = 250)
     private String password;
-    public Long getContractorId() {
-        return contractorId;
-    }
 
-    public void setContractorId(Long contractorId) {
-        this.contractorId = contractorId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 
 }

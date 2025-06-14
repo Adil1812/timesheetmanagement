@@ -1,14 +1,14 @@
 package com.timesheetmanagement.payload;
 
-import com.example.timesheetmanagement.enums.ProjectStatus;
+import com.timesheetmanagement.payload.ProjectDTO;
+import com.timesheetmanagement.util.ProjectStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@NoArgsConstructor
+@Data
 public class ProjectDTO {
 
     @NotBlank(message = "Project code is required")
