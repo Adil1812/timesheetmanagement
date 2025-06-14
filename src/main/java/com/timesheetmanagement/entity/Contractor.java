@@ -5,9 +5,9 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "contractors")
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Contractor {
 
